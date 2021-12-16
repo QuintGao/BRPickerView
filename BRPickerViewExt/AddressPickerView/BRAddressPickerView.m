@@ -8,7 +8,7 @@
 //  最新代码下载地址：https://github.com/91renb/BRPickerView
 
 #import "BRAddressPickerView.h"
-#import "NSBundle+BRPickerView.h"
+#import "NSBundle+BRAddressPickerView.h"
 
 @interface BRAddressPickerView ()<UIPickerViewDataSource, UIPickerViewDelegate>
 // 地址选择器

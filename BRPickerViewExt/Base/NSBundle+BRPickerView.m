@@ -31,18 +31,6 @@ BRSYNTH_DUMMY_CLASS(NSBundle_BRPickerView)
     return pickerBundle;
 }
 
-#pragma mark - 获取城市JSON数据
-+ (NSArray *)br_addressJsonArray {
-    static NSArray *cityArray = nil;
-    if (cityArray == nil) {
-        // 获取本地JSON文件
-        NSString *filePath = [[self br_pickerBundle] pathForResource:@"BRCity" ofType:@"json"];
-        NSData *data = [NSData dataWithContentsOfFile:filePath];
-        cityArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-    }
-    return cityArray;
-}
-
 #pragma mark - 获取国际化后的文本
 + (NSString *)br_localizedStringForKey:(NSString *)key language:(NSString *)language {
     return [self br_localizedStringForKey:key value:nil language:language];
